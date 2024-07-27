@@ -6,6 +6,7 @@ import Home from '../pages/Homes/Home';
 import Product from '../pages/Product/Product';
 import Contact from '../pages/Contact/Contact';
 import About from '../pages/About/About';
+import Login from '../pages/Login/Login';
 
 
 const url =
@@ -34,6 +35,10 @@ const myCreateRouter = createBrowserRouter ([
         {
             path: "/contact",
             element:<Contact></Contact>
+        },
+        {
+            path: "/login",
+            element: <Login></Login>
         }
     ]
 }
