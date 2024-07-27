@@ -3,7 +3,7 @@
 const About = () => {
     return (
         <div>
-            this is about pages
+            this is abouts pages
         </div>
     );
 };

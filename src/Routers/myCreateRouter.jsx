@@ -1,9 +1,16 @@
 
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Contact from '../pages/Contact';
+
+import Home from '../pages/Homes/Home';
+import Product from '../pages/Product/Product';
+import Contact from '../pages/Contact/Contact';
+import About from '../pages/About/About';
+
+
+const url =
+  "https://my-json-server.typicode.com/faarhaan10/react-sunglasses/sunglasses";
+
 
 const myCreateRouter = createBrowserRouter ([
 {
@@ -12,7 +19,13 @@ const myCreateRouter = createBrowserRouter ([
     children :[
         {
             path: "/",
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader: async () => fetch(url),
+        },
+        {
+            path:"/product",
+            element:<Product></Product>,
+            loader: async () => fetch(url),
         },
         {
             path: "/about",
