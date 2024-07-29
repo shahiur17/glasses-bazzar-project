@@ -19,6 +19,7 @@ const ProductDetails = () => {
                         <p>GKB Optical online store brings in the best assortment of sunglasses. You can get a sunglass based on your lifestyle, fashion and requirements.</p>
                         <h1 className="text-4xl font-bold my-4">${sunglass.price}</h1>
                         <button className="btn">Buy it now!</button>
+                        
                     </div>
                 </div>
             </div>

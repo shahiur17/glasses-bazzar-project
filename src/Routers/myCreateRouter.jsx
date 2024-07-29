@@ -9,7 +9,8 @@ import Contact from '../pages/Contact/Contact';
 import About from '../pages/About/About';
 import Login from '../pages/Login/Login';
 import ProductDetails from '../components/ProductDetails/ProductDetails';
-
+import productLoader from "../components/ProductDetails/productLoader";
+import Register from '../pages/Login/Register';
 
 
 const url =
@@ -34,13 +35,8 @@ const myCreateRouter = createBrowserRouter ([
         {
             path: "/product/:id", 
             element: <ProductDetails></ProductDetails>,
-            loader: async ({ params }) => {
-                const response = await fetch(`${url}/${params.id}`);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            },
+            loader: productLoader,
+            
         },
         {
             path: "/about",
@@ -55,7 +51,8 @@ const myCreateRouter = createBrowserRouter ([
             element: <Login></Login>
         },
         {
-            
+           path: "/register",
+           element:<Register></Register> 
         }
     ]
 }
